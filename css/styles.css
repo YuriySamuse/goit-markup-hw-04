@@ -7,10 +7,20 @@
   --acent-btn-hover: #188ce8;
   --hero-bg-color: #2f303a;
   --main-bg-color: #e5e5e5;
+  --card-set-gep: 30px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --padin-botom-sect: 94px;
 }
 
 body {
   font-family: "Roboto";
+ }
+img {
+  display: block;
+  max-width: 100%;
+}
+h1, h2, h3, p, ul {
+  margin: 0;
 }
 
 .link {
@@ -18,8 +28,11 @@ body {
 }
 .list {
   list-style: none;
+  padding-left: 0;
 }
 .section-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -41,13 +54,13 @@ body {
   margin: -1px;
 }
 .container {
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .header-logo {
@@ -61,7 +74,11 @@ body {
 .prelogo {
   color: var(--accent-color);
 }
-/* --------Heder--------- */
+/* ------------Heder---------- */
+.header {
+  background-color: #ffffff;
+  border: 1px solid #ECECEC;
+}
 .main-nav {
   display: flex;
   align-items: center;
@@ -118,15 +135,19 @@ body {
 .heder-cont-link:focus {
   color: var(--accent-color);
 }
-/* ----Hero---- */
-.hero-content {
+/* ----------Hero----------- */
+.hero-section {
   background-color: var(--hero-bg-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero-content {
+  
   }
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-  padding-top: 200px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -135,7 +156,6 @@ body {
   color: var(--btn-color);
 }
 .hero-btn {
-  margin-bottom: 200px;
   cursor: pointer;
   font-family: inherit;
   font-weight: 700;
@@ -152,19 +172,18 @@ body {
   background: var(--acent-btn-hover);
 }
 
-.main-content {
-  background-color: var(--main-bg-color);
-}
-/* ---About---- */
+/* -----------About---------- */
 .about-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: var(--padin-botom-sect);
+  padding-bottom: var(--padin-botom-sect);
 }
 
 .about-list {
   display: flex;
   padding-left: 0;
   justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
  }
 .about-item {
   width: 270px;
@@ -187,13 +206,72 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
-/* -----Service---- */
+/* -----------Service--------- */
+.service-section {
+  padding-bottom: var(--padin-botom-sect);
+}
+.service-title {
+  margin-bottom: 50px;
+}
+.service-list {
+  /* outline: 1px solid orange
+  ; */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gep));
+  margin-top: calc(-1 * var(--card-set-gep));
+}
 
-/* -----Masters----- */
+.service-item {
+  /* outline: 1px solid teal; */
+  flex-basis: calc(100% / 3 - var(--card-set-gep));
+  margin-left: var(--card-set-gep);
+  margin-top: var(--card-set-gep);
+}
+
+
+/* -----------Masters--------- */
+.masters {
+  padding-bottom: var(--padin-botom-sect);
+  background-color: var(--portfol-btn);
+}
+.masters-title {
+  padding-top: var(--padin-botom-sect);
+  margin-bottom: 50px;
+}
+.masters-list {
+  /* outline: 1px solid orange
+  ; */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gep));
+  margin-top: calc(-1 * var(--card-set-gep));
+}
+.card {
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+  padding-bottom: var(--card-set-gep);
+}
+
 .masters-item {
-  background-color: var(--btn-color);
+  /* outline: 1px solid teal; */
+  flex-basis: calc(100% / 4 - var(--card-set-gep));
+  margin-left: var(--card-set-gep);
+  margin-top: var(--card-set-gep);
 }
 .masters-item-title {
+  margin-top: var(--card-set-gep);
+  margin-bottom: 0;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -202,6 +280,8 @@ body {
   color: var(--title-color);
 }
 .masters-item-text {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -212,8 +292,24 @@ body {
 /* ----------PORTFOLIO------------- */
 .main-portfolio {
   background-color: var(--main-bg-color);
+  padding-top: var(--padin-botom-sect);
+  padding-bottom: var(--padin-botom-sect);
+
 }
-/* ----Filter-Button------- */
+/* ----Filter-Button---- */
+.fbtn-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 50px;
+ 
+}
+.fbtn-item{
+  margin-right: 8px;
+}
+.fbtn-item:last-child {
+  margin-right: 0;
+}
 .filter-btn {
   cursor: pointer;
   font-family: inherit;
@@ -224,6 +320,9 @@ body {
   letter-spacing: 0.03em;
   color: var(--title-color);
   background-color: var(--portfol-btn);
+  border: 0;
+  padding: 6px 22px;
+  height: 38px;
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -236,19 +335,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 0;
-}
+  margin-top: 0;
+  }
+
 .card-item {
   width: 370px;
   background-color: var(--btn-color);
   margin-right: 30px;
   margin-bottom: 30px;
+  
 }
 .card-item:nth-child(3n) {
   margin-right: 0;
 }
 .card-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.card-item-deskripion {
+  border: 1px solid #EEEEEE;
+  padding: 20px 24px;
 }
 .card-title {
   font-weight: 700;
@@ -264,9 +369,17 @@ body {
   color: var(--text-color);
 }
 
-/* -----Foooter----- */
+/* -----------Foooter-------- */
 .footer {
   background-color: var(--hero-bg-color);
+  }
+
+  .container-footer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 60px;
+
 }
 .footer-logo {
   font-family: "Raleway";
@@ -275,6 +388,8 @@ body {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--btn-color);
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 .footer-adress {
   font-style: normal;
@@ -282,6 +397,9 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--btn-color);
+}
+.footer-list {
+  margin: 0;
 }
 .footer-cont {
   font-size: 14px;
