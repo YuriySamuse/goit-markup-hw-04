@@ -77,7 +77,7 @@ h1, h2, h3, p, ul {
 /* ------------Heder---------- */
 .header {
   background-color: #ffffff;
-  border: 1px solid #ECECEC;
+  border-bottom: 1px solid #ECECEC;
 }
 .main-nav {
   display: flex;
@@ -165,6 +165,8 @@ h1, h2, h3, p, ul {
   align-items: center;
   letter-spacing: 0.06em;
   border: 0;
+  width: 200px;
+  height: 50px;
   
   color: var(--btn-color);
   background: var(--accent-color);
@@ -237,11 +239,11 @@ h1, h2, h3, p, ul {
 
 /* -----------Masters--------- */
 .masters {
+  padding-top: var(--padin-botom-sect);
   padding-bottom: var(--padin-botom-sect);
   background-color: var(--portfol-btn);
 }
 .masters-title {
-  padding-top: var(--padin-botom-sect);
   margin-bottom: 50px;
 }
 .masters-list {
@@ -292,7 +294,6 @@ h1, h2, h3, p, ul {
 
 /* ----------PORTFOLIO------------- */
 .main-portfolio {
-  background-color: var(--main-bg-color);
   padding-top: var(--padin-botom-sect);
   padding-bottom: var(--padin-botom-sect);
 
@@ -380,6 +381,7 @@ h1, h2, h3, p, ul {
   align-items: flex-start;
   flex-direction: column;
   padding-bottom: 60px;
+  padding-top: 60px;
 
 }
 .footer-logo {
@@ -389,7 +391,6 @@ h1, h2, h3, p, ul {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--btn-color);
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 .footer-adress {
@@ -398,9 +399,16 @@ h1, h2, h3, p, ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--btn-color);
+  margin-bottom: 9px;
 }
 .footer-list {
   margin: 0;
+}
+.footer-item {
+  margin-bottom: 9px;
+}
+.footer-item:last-child {
+  margin-bottom: 0px;
 }
 .footer-cont {
   font-size: 14px;
