@@ -125,6 +125,7 @@ h1, h2, h3, p, ul {
   margin-left: 50px;
 }
 .heder-cont-link {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -135,16 +136,36 @@ h1, h2, h3, p, ul {
 .heder-cont-link:focus {
   color: var(--accent-color);
 }
+.heder-cont-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: currentColor;
+}
+
 /* ----------Hero----------- */
 .hero-section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+    to right, 
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+    ), url(../images/hero-bg.jpg);
+  /* background-image: url(../images/hero-bg.jpg); */
   background-color: var(--hero-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.hero-content {
-  
-  }
+
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -183,7 +204,6 @@ h1, h2, h3, p, ul {
 
 .about-list {
   display: flex;
-  padding-left: 0;
   justify-content: space-between;
   margin-top: 0;
   margin-bottom: 0;
@@ -191,6 +211,24 @@ h1, h2, h3, p, ul {
 .about-item {
   width: 270px;
 }
+.about-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.about-icon {
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .about-list-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -251,7 +289,7 @@ h1, h2, h3, p, ul {
   ; */
   padding: 0;
   margin: 0;
-  list-style: none;
+  /* list-style: none; */
 
   display: flex;
   flex-wrap: wrap;
@@ -291,7 +329,78 @@ h1, h2, h3, p, ul {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
+.masters-soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
 
+.masters-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  fill: #AFB1B8;
+}
+.masters-soc-link:hover,
+.masters-soc-link:focus  {
+  background-color: var(--accent-color);
+  fill: #FFFFFF;
+}
+
+.masters-soc-icon {
+  width: 20px;
+  height: 20px;
+  fill: coverColor;
+}
+
+/* ----customers----- */
+.customers {
+  padding-top: var(--padin-botom-sect);
+  padding-bottom: var(--padin-botom-sect);
+}
+.customers-title {
+  margin-bottom: 50px;
+}
+.customers-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gep));
+  margin-top: calc(-1 * var(--card-set-gep));
+  }
+  
+.customers-item {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  flex-basis: calc(100% / 6 - var(--card-set-gep));
+  margin-left: var(--card-set-gep);
+  margin-top: var(--card-set-gep);
+  fill: #AFB1B8;
+}
+.customers-item:hover, 
+.customers-item:focus {
+  border: 1px solid var(--accent-color);  
+  fill: var(--accent-color);
+  cursor: pointer;
+  }
+.customers-icon {
+  width: 106px;
+  height: 60px;
+  fill: carentColor;
+  
+  
+}
 /* ----------PORTFOLIO------------- */
 .main-portfolio {
   padding-top: var(--padin-botom-sect);
@@ -375,14 +484,19 @@ h1, h2, h3, p, ul {
 .footer {
   background-color: var(--hero-bg-color);
   }
-
-  .container-footer {
+.container-footer {
+  display: flex;
+  align-items: baseline;
+  
+}
+      /* ----footer-adress------ */
+  .container-adress {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   padding-bottom: 60px;
   padding-top: 60px;
-
+  margin-right: 70px;
 }
 .footer-logo {
   font-family: "Raleway";
@@ -419,4 +533,46 @@ h1, h2, h3, p, ul {
 .footer-cont:hover,
 .footer-cont:focus {
   color: var(--accent-color);
+}
+
+      /* ---footer-soc----- */
+
+.footer-soc-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.footer-soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-soc-title {
+  margin-bottom: 20px;
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  fill: #FFFFFF;
+}
+.footer-soc-icon {
+  width: 20px;
+  height: 20px;
+  fill: coverColor;
+}
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
 }
