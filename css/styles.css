@@ -124,13 +124,10 @@ h1, h2, h3, p, ul {
   display: flex;
   margin-left: auto;
   
-  
-
 }
 
 .nav-contacts-item + .nav-contacts-item {
   margin-left: 50px;
-  
 }
 .heder-cont-link {
   display: flex;
