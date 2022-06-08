@@ -160,8 +160,8 @@ h1, h2, h3, p, ul {
   margin-right: auto;
   background-image: linear-gradient(
     to right, 
-    rgba(47, 48, 58, 0.8),
-    rgba(47, 48, 58, 0.8)
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
     ), url(../images/hero-bg.jpg);
   /* background-image: url(../images/hero-bg.jpg); */
   background-color: var(--hero-bg-color);
@@ -385,7 +385,7 @@ h1, h2, h3, p, ul {
   margin-top: calc(-1 * var(--card-set-gep));
   }
   
-.customers-item {
+.customers-item-link {
   width: 170px;
   height: 92px;
   display: flex;
@@ -398,8 +398,8 @@ h1, h2, h3, p, ul {
   margin-top: var(--card-set-gep);
   fill: #AFB1B8;
 }
-.customers-item:hover, 
-.customers-item:focus {
+.customers-item-link:hover, 
+.customers-item-link:focus {
   border: 1px solid var(--accent-color);  
   fill: var(--accent-color);
   cursor: pointer;
